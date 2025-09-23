@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "progressor"
+version = "0.0.1"
+dependencies = []
+authors = [
+  { name="Vasiliy566", email="vasyaisaev31@gmail.com" },
+]
+description = "Lightweight task progress tracking with pluggable storage backends"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/Vasiliy566/progressor"
+Issues = "https://github.com/Vasiliy566/progressor/issues"
+
+[dependency-groups]
+dev = [
+    "commitizen>=4.9.1",
+    "poethepoet>=0.34.0",
+    "pytest-asyncio==0.26.0",
+    "ruff>=0.11.6",
+]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.1"
+tag_format = "v$version"
+update_changelog_on_bump = true
+
+[tool.poe.tasks]
+lint = "uv run ruff check --fix"
+test = "uv run pytest tests"
