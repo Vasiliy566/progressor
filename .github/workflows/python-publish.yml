@@ -3,7 +3,7 @@ name: CI & Publish
 on:
   push:
     branches:
-      - master
+      - main
 
 permissions:
   contents: write  # нужно для того, чтобы пушить теги/коммиты
@@ -43,7 +43,7 @@ jobs:
           git add pyproject.toml CHANGELOG.md
           git commit -m "chore(release): ${{ steps.bump.outputs.version }}"
           git tag v${{ steps.bump.outputs.version }}
-          git push origin HEAD:master --tags
+          git push origin HEAD:main --tags
 
       - name: Build package
         run: hatch build
