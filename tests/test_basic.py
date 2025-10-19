@@ -1,5 +1,5 @@
-from src.progressor import ProgressManager
-from src.progressor.backends.memory import InMemoryStore
+from progressorx import ProgressManager
+from progressorx.backends.memory import InMemoryStore
 
 
 def test_set_and_get():

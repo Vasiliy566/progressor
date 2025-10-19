@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.progressor.models import ProgressRecord
+from progressorx.models import ProgressRecord
 
 
 class ProgressStore(ABC):

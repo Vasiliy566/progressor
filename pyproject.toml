@@ -3,8 +3,8 @@ requires = ["hatchling >= 1.26"]
 build-backend = "hatchling.build"
 
 [project]
-name = "progressor"
-version = "0.0.1"
+name = "progressorx"
+version = "0.0.6"
 dependencies = []
 authors = [
   { name="Vasiliy566", email="vasyaisaev31@gmail.com" },

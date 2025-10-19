@@ -1,4 +1,4 @@
-# progressor
+# progressorx
 
 
 `progressor` — lightweight progress-tracking package for long-running tasks.
@@ -13,8 +13,8 @@ Features:
 
 ## Quick example
 ```python
-from progressor import ProgressManager
-from progressor.backends.memory import InMemoryStore
+from progressorx import ProgressManager
+from progressorx.backends.memory import InMemoryStore
 
 
 store = InMemoryStore()
@@ -28,4 +28,3 @@ print(mgr.get_progress('task-1')) # {'task_id': 'task-1', 'progress': 15, 'statu
 
 
 See examples/fastapi_example.py for how to integrate with FastAPI.
-```

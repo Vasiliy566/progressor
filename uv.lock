@@ -296,8 +296,8 @@ wheels = [
 ]
 
 [[package]]
-name = "progressor"
-version = "0.0.1"
+name = "progressorx"
+version = "0.0.5"
 source = { editable = "." }
 
 [package.dev-dependencies]

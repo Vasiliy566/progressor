@@ -1,6 +1,6 @@
-from ..exceptions import RecordNotFoundError, IncorrectProgressValueError
-from ..models import ProgressRecord
-from ..store import ProgressStore
+from progressorx.models import ProgressRecord
+from progressorx.exceptions import RecordNotFoundError, IncorrectProgressValueError
+from progressorx.store import ProgressStore
 
 
 class InMemoryStore(ProgressStore):
@@ -15,7 +15,7 @@ class InMemoryStore(ProgressStore):
 
     def get(self, task_id: str) -> ProgressRecord:
         try:
-            return self._data.get(task_id)
+            return self._data[task_id]
         except KeyError:
             raise RecordNotFoundError
 

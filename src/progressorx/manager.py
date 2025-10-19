@@ -1,5 +1,5 @@
-from src.progressor.models import ProgressRecord
-from src.progressor.store import ProgressStore
+from progressorx.models import ProgressRecord
+from progressorx.store import ProgressStore
 
 
 class ProgressManager:

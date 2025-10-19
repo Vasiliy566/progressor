@@ -3,8 +3,8 @@ from fastapi import FastAPI, BackgroundTasks, HTTPException
 import time
 import uuid
 
-from src.progressor import ProgressManager
-from src.progressor.backends.memory import InMemoryStore
+from progressorx import ProgressManager
+from progressorx.backends.memory import InMemoryStore
 
 app = FastAPI()
 store = InMemoryStore()
