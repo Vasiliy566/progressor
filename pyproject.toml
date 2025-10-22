@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "progressorx"
-version = "0.0.6"
+version = "0.1.0"
 dependencies = []
 authors = [
   { name="Vasiliy566", email="vasyaisaev31@gmail.com" },
@@ -36,6 +36,11 @@ name = "cz_conventional_commits"
 version = "0.0.1"
 tag_format = "v$version"
 update_changelog_on_bump = true
+
+[project.optional-dependencies]
+redis = [
+    "redis",
+]
 
 [tool.poe.tasks]
 lint = "uv run ruff check --fix"

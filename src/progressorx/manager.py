@@ -27,5 +27,8 @@ class ProgressManager:
             return self.store.set(task_id, progress)
         return self.store.increment(task_id, increase)
 
+    def set_failed(self, task_id: str, ):
+        return self.store.set(task_id, progress=0, status="failed")
+
     def get_progress(self, task_id: str) -> ProgressRecord:
         return self.store.get(task_id)

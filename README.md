@@ -16,15 +16,22 @@ Features:
 from progressorx import ProgressManager
 from progressorx.backends.memory import InMemoryStore
 
-
 store = InMemoryStore()
 mgr = ProgressManager(store)
 
+# create task
+mgr.create('task-1')
 
+# set and increment progress
 mgr.report_progress('task-1', progress=10)
 mgr.report_progress('task-1', increase=5)
-print(mgr.get_progress('task-1')) # {'task_id': 'task-1', 'progress': 15, 'status': 'in_progress'}
+
+rec = mgr.get_progress('task-1')
+print(rec.task_id, rec.progress, rec.status)  # task-1 15.0 in_progress
 ```
 
-
-See examples/fastapi_example.py for how to integrate with FastAPI.
+## Examples
+- Basic runnable example: src/progressorx/examples/basic.py
+  - Run: `python -m progressorx.examples.basic`
+- FastAPI integration: src/progressorx/examples/fastapi.py
+  - Run: `uvicorn progressorx.examples.fastapi:app --reload`
